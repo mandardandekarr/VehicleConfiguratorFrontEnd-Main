@@ -26,6 +26,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import FeedbackIcon from '@mui/icons-material/Feedback';
 import InfoIcon from '@mui/icons-material/Info';
+import LoginIcon from '@mui/icons-material/Login';
 
 const drawerWidth = 240;
 
@@ -93,7 +94,8 @@ export default function Navbar() {
 
   const items = [
     { key: '/', text: 'Home', icon: <HomeIcon /> },
-    { key: '/register', text: 'Login/Register', icon: <PersonIcon /> },
+    { key: '/register', text: 'Register', icon: <PersonIcon /> },
+    { key: '/login', text: 'Login', icon: <LoginIcon /> },
     { key: '/about', text: 'About', icon: <InfoIcon /> },
     { key: '/contact', text: 'Contact Us', icon: <CallIcon /> },
     { key: '/feedback', text: 'Feedback', icon: <FeedbackIcon /> }

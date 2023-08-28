@@ -11,6 +11,7 @@ import Welcomepage from './pages/welcome'
 import Defaultconfig from './pages/Defaultconfig';
 import Config from './pages/Config';
 import Invoice from './pages/Invoice';
+import Login from './pages/Login';
 //import configure from "./pages/configure"
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Route path ="/contact" exact element ={<Contact />}></Route>
       <Route path ="/feedback" exact element ={<Feedback />}></Route>
       <Route path ="/welcome" exact element ={<Welcomepage />}></Route>
+      <Route path ="/login" exact element ={<Login />}></Route>
       <Route path ="/invoice" exact element ={<Invoice />}></Route>
       <Route path ="/defaultconfig/:model_id" exact element ={<Defaultconfig />}></Route>
       <Route path ="/configure" exact element ={<Config />}></Route>

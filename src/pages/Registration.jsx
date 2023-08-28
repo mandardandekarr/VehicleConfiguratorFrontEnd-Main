@@ -4,21 +4,22 @@ import Navbar from '../component/Navbar';
 import Topbar from '../component/Topbar';
 import Footer from '../component/Footer';
 import { TextField, Button, Container, Typography, Paper, Stack } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { json, useNavigate } from 'react-router-dom';
 
 function App() {
   const [formData, setFormData] = useState({
     id: '',
     username: '',
+    emailid:'',
     password: '',
     comp_name: '',
     address: '',
-    telephone: '',
+    telephone: 0,
     holding: '',
     name_auth_person: '',
     designation: '',
-    auth_tel: '',
-    auth_cell: '',
+    auth_tel: 0,
+    auth_cell: 0,
     comp_st_no: '',
     vat_no: '',
     pan: '',
@@ -46,16 +47,17 @@ let navigate=useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
     let demo = JSON.stringify(formData);
+    console.log(demo);
     console.log(JSON.parse(demo));
 
-    /*fetch("http://localhost:8080/api/signup", {
+    fetch("http://localhost:8080/api/signup", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: demo,
-    });*/
+    });
 
     alert("New User added");
-    navigate("/welcome");
+    navigate("/login");
   };
 
   return (
@@ -73,7 +75,7 @@ let navigate=useNavigate();
                 <TextField
                   label="Email id"
                   type="email" 
-                  name="id"
+                  name="emailid"
                   fullWidth
                   margin="normal"
                   variant="outlined"
@@ -130,7 +132,7 @@ let navigate=useNavigate();
                   <TextField
                     label="designation"
                     type="text"
-                    name="Designation"
+                    name="designation"
                     fullWidth
                     margin="normal"
                     variant="outlined"
@@ -196,9 +198,9 @@ let navigate=useNavigate();
                 />
 
                 <TextField
-                  label="PAN"
+                  label="pan"
                   type="text"
-                  name="PAN"
+                  name="pan"
                   fullWidth
                   margin="normal"
                   variant="outlined"
